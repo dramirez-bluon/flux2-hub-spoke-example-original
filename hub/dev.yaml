@@ -19,7 +19,7 @@ metadata:
 #    kind: GitRepository
 #    name: flux-system
 #    namespace: flux-system
-#  kubeConfig:
+#  kubeConfig:  git remote set-url origin
 #    secretRef:
 #      name: cluster-kubeconfig
 #  postBuild:
@@ -87,8 +87,8 @@ metadata:
   name: apps
   namespace: dev
 spec:
-  dependsOn:
-    - name: infra-configs
+  #dependsOn:
+  #  - name: infra-configs
   targetNamespace: dev
   interval: 1h
   retryInterval: 3m
